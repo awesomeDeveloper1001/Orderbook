@@ -1,0 +1,79 @@
+#root {
+  width: 750px;
+  text-align: left;
+  margin: 0px auto;
+  font-size: 14px;
+}
+
+body {
+  background-color: rgb(16, 24, 38);
+}
+
+th, td {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+tr.fill-bid td {
+  color: #FFFFFF;
+}
+
+tr.fill-bid td:last-child {
+  color: #008528;
+}
+
+tr.fill-ask td {
+  color: #FFFFFF;
+}
+
+tr.fill-ask td:first-child {
+  color: #9b2929;
+}
+
+h1.instrument {
+  font-family: monospace;
+  font-size: 32px;
+}
+
+.OrderBook {
+  display: flex;
+}
+.OrderBook table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.OrderBook thead th {
+  font-weight: normal;
+}
+
+.OrderBook table thead:after {
+    content: "-";
+    display: block;
+    line-height: 1em;
+    color: transparent;
+}
+
+.OrderBook table tbody td {
+    border-bottom: 1.5px dashed black;
+    padding: 5px;
+}
+
+.OrderBook table tbody tr.fill-bid {
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-image: linear-gradient(to left, rgba(16, 56, 58, 0.7) 100%, white 0%);
+  background-size: 0%;
+}
+
+.OrderBook table tbody tr.fill-ask {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to left, #ffcccc 100%, white 0%);
+  background-size: 0%;
+}
+
+.OrderBook tr.ask:last-of-type,
+.OrderBook tr.bid:first-of-type {
+  font-weight: bold;
+}
